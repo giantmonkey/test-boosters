@@ -139,9 +139,9 @@ TB_RSPEC_OPTIONS='--fail-fast=3' TB_RSPEC_FORMATTER=Fivemat rspec_booster --job 
 bundle exec rspec --fail-fast=3 --format Fivemat --format json --out /home/<user>/rspec_report.json <file_list>
 ```
 
-You may pass a prefix for the rspec command via `TB_RSPEC_COMMAND_PREFIX`, e.g. `TB_RSPEC_COMMAND_PREFIX='next'` will result in 
+You may pass the rspec command via `TB_RSPEC_COMMAND`, e.g. `TB_RSPEC_COMMAND='next bundle _2.3.26_ exec rspec'` will result in 
 ```
-next bundle exec rspec <rspec options>
+next bundle _2.3.26_ exec rspec <rspec options>
 ```
 
 ## Cucumber Booster

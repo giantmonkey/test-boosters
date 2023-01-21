@@ -18,11 +18,11 @@ module TestBoosters
       end
 
       def command
-        @command ||= "#{command_prefix} bundle exec rspec #{rspec_options}"
+        @command ||= "#{rspec_command} #{rspec_options}"
       end
 
-      def command_prefix
-        @command_prefix ||= ENV.fetch("TB_RSPEC_COMMAND_PREFIX", "")
+      def rspec_command
+        @rspec_command ||= ENV.fetch("TB_RSPEC_COMMAND", "bundle exec rspec")
       end
 
       def rspec_options
